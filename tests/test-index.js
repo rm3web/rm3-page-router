@@ -13,6 +13,20 @@ describe('page-router',function() {
     res = {};
   });
 
+  it('routes all', function(done) {
+    router.route_all('edit',function(req, res, next) {
+      res.ok = 'pretty';
+      done();
+    });
+
+    router.can_handle('get','edit').should.be.ok;
+
+    router.handle('edit', req, res, function(err) {
+      res.ok.should.equal('pretty');
+      done();
+    });
+  });
+
   it('routes a single function', function(done) {
     router.get('edit',function(req, res, next) {
       res.ok = 'pretty';
