@@ -9,7 +9,7 @@ describe('page-router',function() {
   beforeEach(function() {
     router = new PageRouter();
     req = {};
-    req.method = 'get';
+    req.method = 'GET';
     res = {};
   });
 
@@ -20,6 +20,7 @@ describe('page-router',function() {
     });
 
     router.can_handle('get','edit').should.be.ok;
+    router.can_handle('GET','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('pretty');
@@ -41,6 +42,7 @@ describe('page-router',function() {
       should.fail();
     });
 
+    router.can_handle('GET','edit').should.be.ok;
     router.can_handle('get','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
@@ -63,7 +65,7 @@ describe('page-router',function() {
       done();
     });
 
-    router.can_handle('get','edit').should.be.ok;
+    router.can_handle('GET','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('shiny');
