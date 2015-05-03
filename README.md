@@ -11,7 +11,9 @@ It's heavily inspired by Express 4's router.  So much so that the Express 4 copy
 
 ## Contributing
 
-Submit PR's.
+Feel free to submit PR's or bugs.
+
+Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 ## License?
 
