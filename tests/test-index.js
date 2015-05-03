@@ -27,6 +27,8 @@ describe('page-router',function() {
       should.fail();
     });
 
+    router.can_handle('get','edit').should.be.ok;
+
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('pretty');
       done();
@@ -46,6 +48,8 @@ describe('page-router',function() {
       res.second = 'sparkles';
       done();
     });
+
+    router.can_handle('get','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('shiny');
