@@ -19,8 +19,8 @@ describe('page-router',function() {
       done();
     });
 
-    router.can_handle('get','edit').should.be.ok;
-    router.can_handle('GET','edit').should.be.ok;
+    router.canHandle('get','edit').should.be.ok;
+    router.canHandle('GET','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('pretty');
@@ -42,8 +42,8 @@ describe('page-router',function() {
       should.fail();
     });
 
-    router.can_handle('GET','edit').should.be.ok;
-    router.can_handle('get','edit').should.be.ok;
+    router.canHandle('GET','edit').should.be.ok;
+    router.canHandle('get','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('pretty');
@@ -52,20 +52,20 @@ describe('page-router',function() {
   });
 
   it('routes a chain in order', function(done) {
-
-    var router = new PageRouter();
     router.get('edit',function(req, res, next) {
+      console.log('first')
       res.ok = 'shiny';
-      done();
+      next();
     });
 
     router.get('edit',function(req, res, next) {
-      res.ok.should.equal('t');
+      console.log('second')
+      res.ok.should.equal('shiny');
       res.second = 'sparkles';
-      done();
+      next();
     });
 
-    router.can_handle('GET','edit').should.be.ok;
+    router.canHandle('GET','edit').should.be.ok;
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('shiny');
@@ -75,7 +75,6 @@ describe('page-router',function() {
   });
 
   it('routes errors', function(done) {
-    var router = new PageRouter();
     router.get('edit',function(req, res, next) {
       next(new Error('injected error'));
     });
