@@ -14,7 +14,7 @@ describe('page-router',function() {
   });
 
   it('routes all', function(done) {
-    router.route_all('edit',function(req, res, next) {
+    router.routeAll('edit',function(req, res, next) {
       res.ok = 'pretty';
       done();
     });
