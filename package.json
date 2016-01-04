@@ -25,9 +25,9 @@
     "async": "~1.5.1"
   },
   "devDependencies": {
-    "mocha": "~2.2.1",
+    "mocha": "~2.3.3",
     "should": "~5.2.0",
     "jshint": "~2.7.0",
-    "istanbul": "~0.3.13"
+    "istanbul": "~0.3.22"
   }
 }
