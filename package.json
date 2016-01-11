@@ -1,6 +1,6 @@
 {
-  "name": "page-router",
-  "version": "0.0.0",
+  "name": "rm3-page-router",
+  "version": "0.0.1",
   "description": "A helper router for resource-specific express routing",
   "main": "lib/index.js",
   "directories": {
@@ -8,14 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wirehead/page-router.git"
+    "url": "git@github.com:rm3web/rm3-page-router.git"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/*",
     "lint": "./node_modules/.bin/jshint lib tests",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha tests/*"
   },
-  "author": "Wirehead",
+  "author": "Wirehead <wh-npm@wirewd.com>",
+  "bugs": {
+    "url": "https://github.com/rm3web/rm3-page-router/issues"
+  },
+  "homepage": "https://github.com/rm3web/rm3-page-router",
   "keywords": [
     "router"
   ],

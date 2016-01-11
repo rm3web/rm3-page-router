@@ -1,0 +1,7 @@
+.DS_Store
+/node_modules
+/tests
+/coverage
+.travis.yml
+textblocks.sublime-workspace
+textblocks.sublime-project
