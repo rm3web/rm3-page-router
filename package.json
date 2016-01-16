@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "mocha": "~2.3.4",
-    "should": "~8.0.2",
+    "should": "~8.1.1",
     "jshint": "~2.9.1-rc1",
     "istanbul": "~0.4.1"
   }
