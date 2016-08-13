@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Updated dependencies
+- Supported versions of node.js are 4.0 and 5.0
 
 ### Fixed
  - Accidentally binding to the wrong this
