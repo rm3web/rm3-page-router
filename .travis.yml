@@ -1,13 +1,22 @@
 language: node_js
 node_js:
-  - "4"
-  - "5"
+- '4'
+- '5'
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-script: "npm run travis"
+    - g++-4.8
+script: npm run travis
+deploy:
+  provider: npm
+  email: wh-npm@wirewd.com
+  api_key:
+    secure: Ia8qnA87ymPD7//OVyMMoH3Z0k75mn1TQTThM5Ulo8KwB84fdRt8GXFQEA4WLaFQgeCtuk3WtdiV2ItOeWGuUETtgZua+3vCKsjVFlQNzRtpGupwD6eyvhV+3aaA+4FS3aRJ6NpYtq5kEvOIRQA2N8jmuSlbxSUjdVc7DXNqP44=
+  on:
+    tags: true
+    repo: rm3web/rm3-page-router
+    node: '4'
