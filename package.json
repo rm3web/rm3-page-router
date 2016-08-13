@@ -13,7 +13,7 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha tests/*",
     "lint": "./node_modules/.bin/jshint lib tests",
-    "travis": "npm run test && npm run lint",
+    "travis": "npm run test && ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha tests/*.js --report lcovonly && codecov",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha tests/*"
   },
   "author": "Wirehead <wh-npm@wirewd.com>",
@@ -25,11 +25,16 @@
     "router"
   ],
   "license": "MIT",
+  "engines": {
+    "node": "4.x || 5.x",
+    "npm": "2.x || 3.x"
+  },
   "dependencies": {
     "methods": "~1.1.1",
     "async": "~1.5.1"
   },
   "devDependencies": {
+    "codecov": "^1.0.1",
     "mocha": "~3.0.1",
     "should": "~11.0.0",
     "jshint": "~2.9.1-rc1",
