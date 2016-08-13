@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+## 0.0.2 - 2016-8-13
+### Fixed
+ - Accidentally binding to the wrong this
+
 ## 0.0.1 - 2016-1-10
 ### Added
  - Finally pushing a release to npm.
