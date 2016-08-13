@@ -1,5 +1,7 @@
 # Page Router
 
+[![Build Status](https://travis-ci.org/rm3web/rm3-page-router.svg?branch=master)](https://travis-ci.org/rm3web/rm3-page-router)[![Dependency Status](https://david-dm.org/rm3web/rm3-page-router.svg)](https://david-dm.org/rm3web/rm3-page-router)[![devDependency Status](https://david-dm.org/rm3web/rm3-page-router/dev-status.svg)](https://david-dm.org/rm3web/rm3-page-router#info=devDependencies)[![npm version](https://badge.fury.io/js/rm3-page-router.svg)](https://www.npmjs.com/package/rm3-page-router)[![codecov](https://codecov.io/gh/rm3web/rm3-page-router/branch/master/graph/badge.svg)](https://codecov.io/gh/rm3web/rm3-page-router)
+
 When you are trying to do resource-specific routing in Express where the 
 actual set of routes you are trying to mount aren't known until you 
 have queried the node from the database, you can't just use Express 4's
