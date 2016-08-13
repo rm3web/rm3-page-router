@@ -41,15 +41,13 @@ describe('page-router',function() {
   });
 
   it('has a proper this pointer', function() {
-    router2 = new PageRouter();
+    var router2 = new PageRouter();
     router2.routeAll('edit',function(req, res, next) {
       res.ok = 'pretty';
-      done();
     });
 
     router.routeAll('sparkle',function(req, res, next) {
       res.ok = 'pretty';
-      done();
     });
 
     router.canHandle('get','edit').should.equal(false);
