@@ -13,6 +13,18 @@ describe('page-router',function() {
     res = {};
   });
 
+  it('defaults', function(done) {
+    router.canHandle('get','edit').should.equal(false);
+
+    router.handle('edit', req, res, function(err) {
+      if (!err) {
+        should.fail();
+      }
+      err.message.should.equal('Cannot handle');
+      done();
+    });
+  });
+
   it('routes all', function(done) {
     router.routeAll('edit',function(req, res, next) {
       res.ok = 'pretty';
@@ -26,6 +38,23 @@ describe('page-router',function() {
       res.ok.should.equal('pretty');
       done();
     });
+  });
+
+  it('has a proper this pointer', function() {
+    var router2 = new PageRouter();
+    router2.routeAll('edit',function(req, res, next) {
+      res.ok = 'pretty';
+    });
+
+    router.routeAll('sparkle',function(req, res, next) {
+      res.ok = 'pretty';
+    });
+
+    router.canHandle('get','edit').should.equal(false);
+    router.canHandle('get','sparkle').should.equal(true);
+
+    router2.canHandle('get','edit').should.equal(true);
+    router2.canHandle('get','sparkle').should.equal(false);
   });
 
   it('routes a single function', function(done) {
@@ -44,6 +73,8 @@ describe('page-router',function() {
 
     router.canHandle('GET','edit').should.equal(true);
     router.canHandle('get','edit').should.equal(true);
+    router.canHandle('put','edit').should.equal(false);
+    router.canHandle('fff','edit').should.equal(false);
 
     router.handle('edit', req, res, function(err) {
       res.ok.should.equal('pretty');

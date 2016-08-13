@@ -5,6 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 
 ## 0.0.2 - 2016-8-13
+### Added
+- 100% test coverage
+
+### Changed
+- Updated dependencies
+
 ### Fixed
  - Accidentally binding to the wrong this
 
