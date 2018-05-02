@@ -1,6 +1,6 @@
 {
   "name": "rm3-page-router",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A helper router for resource-specific express routing",
   "main": "lib/index.js",
   "directories": {

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-## 0.0.3 - 2017-06-17
+## 0.0.4 - 2018-05-01
 ### Changed
 - Updated dependencies
 - Support node.js 6.0 and 8.0
