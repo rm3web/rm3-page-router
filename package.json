@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "codecov": "^3.0.0",
-    "mocha": "~4.1.0",
+    "mocha": "~6.1.2",
     "should": "~13.2.0",
     "jshint": "~2.9.1-rc1",
     "istanbul": "~0.4.1"
