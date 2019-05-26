@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "methods": "~1.1.1",
-    "async": "~2.6.0"
+    "async": "~3.0.1"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
